@@ -31,6 +31,7 @@ pipeline {
     stage('Run unit tests') {
       steps {
         sh '''. venv/bin/activate
+        pip freeze | grep ldap
         PYTHONPATH=. pytest tests.py --junit-xml=test-reports/junit/junit.xml'''
       }
     }
