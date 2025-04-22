@@ -31,7 +31,7 @@ pipeline {
     stage('Run unit tests') {
       steps {
         sh '''. venv/bin/activate
-        PYTHONPATH=. pytest . --junit-xml=test-reports/junit/junit.xml'''
+        PYTHONPATH=. pytest tests.py --junit-xml=test-reports/junit/junit.xml'''
       }
     }
     stage('Build and publish dist') {
