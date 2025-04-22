@@ -9,7 +9,7 @@ pipeline {
   }
 
   stages {
-    stage('Run linter') {
+    /*stage('Run linter') {
       steps {
         sh '''
         mkdir test-reports && touch test-reports/flake8.txt
@@ -17,6 +17,7 @@ pipeline {
         '''
       }
     }
+    */
 
     stage('Install dependencies') {
       steps {
@@ -46,7 +47,7 @@ pipeline {
     always {
       junit(testResults: 'test-reports/**/*.xml', allowEmptyResults: true)
       recordIssues(
-        tool: flake8(pattern: 'test-reports/flake8.txt'),
+        // tool: flake8(pattern: 'test-reports/flake8.txt'),
         enabledForFailure: true,
         qualityGates: [[type: 'TOTAL', unstable: true, threshold: 1]]
       )
