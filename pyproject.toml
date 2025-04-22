@@ -29,7 +29,7 @@ classifiers = [
 ]
 keywords = ['mock', 'ldap']
 maintainers = [
-    { "name" = "Anna Holmgrn", "email" = "anna.holmgren@feelgood.se" }
+    { "name" = "Anna Holmgren", "email" = "anna.holmgren@feelgood.se" }
 ]
 dynamic = ["readme"]
 
