@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mockldap"
+version = "0.3.2"
+authors = [
+    { "name" = "Peter Sagerson", "email" = "psagers@ignorare.net" },
+]
+description = "A simple mock implementation of python-ldap. Forked from the original"
+dependencies = [
+    "funcparserlib >= 1.0.0",
+    "python-ldap >= 3.0",
+]
+license = 'CC0-1.0'
+license-files = ["LICENSE.rst"]
+classifiers = [
+    'Development Status :: 5 - Production/Stable',
+    'Environment :: Web Environment',
+    'Intended Audience :: Developers',
+    'Intended Audience :: System Administrators',
+    'Programming Language :: Python :: 2',
+    'Programming Language :: Python :: 3',
+    'Programming Language :: Python',
+    'Topic :: Internet :: WWW/HTTP',
+    'Topic :: Software Development :: Libraries :: Python Modules',
+    'Topic :: System :: Systems Administration :: Authentication/Directory :: LDAP',
+]
+keywords = ['mock', 'ldap']
+maintainers = [
+    { "name" = "Anna Holmgrn", "email" = "anna.holmgren@feelgood.se" }
+]
+dynamic = ["readme"]
+
+[project.urls]
+repository = "https://github.com/feelgood/mockldap"
+documentation = "https://mockldap.readthedocs.io/"
+
